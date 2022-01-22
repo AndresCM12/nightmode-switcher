@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booo...</title>
+    <link rel="icon" href="./icon.png">
+  </head>
+  <link rel="stylesheet" href="./styles.css">
+  <body>
+      <main>
+        <div id="divimage" class="image">
+
+        </div>
+        <div class="button">
+            <input id="toggle-button" type="checkbox">
+            <label for="toggle-button">
+                <div class="sun-moon"></div>
+            </label>
+        </div>
+        
+      </main>
+    <footer id="footers">
+        <a id="link" href="https://storyset.com/fear">Fear illustrations by Storyset</a>
+        <a id="linkd" href="https://storyset.com/people">People illustrations by Storyset</a>
+        <a id="linkt">Code by: AndresCM12</a>
+    </footer>
+    
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        toggleButton.addEventListener('change', () =>{
+            document.body.classList.toggle('dark')
+            document.getElementById('divimage').classList.toggle('imaged')
+            document.getElementById('link').classList.toggle('dark')
+            document.getElementById('linkd').classList.toggle('dark')
+            document.getElementById('linkt').classList.toggle('dark')
+        });
+    </script>
+  </body>
+</html>

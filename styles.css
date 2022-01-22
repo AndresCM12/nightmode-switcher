@@ -1,0 +1,118 @@
+:root{
+    --light-0: #f8f9fa;
+    --light-1: #e9ecef;
+    --light-2: #dee2e6;
+    --dark-0: #495057;
+    --dark-1: #343a40;
+    --dark-2: #212529;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+main{
+    margin-top: 200px;
+    display: grid;
+    place-items: center;
+    height:100%;
+    width: 100%;
+}
+main .sun-moon{
+    height: 100%;
+    width: 100%;
+}
+main .button{
+    display: grid;
+    place-items: flex-start center;
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: var(--light-0);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 800px;
+    margin: 0px;
+    transition: background 0.3s ease;
+    overflow-y: auto;
+    min-width: 320px;
+}
+div.image{
+    background: url('./imagination-animate.svg');
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    max-width: 375px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 49px;
+    transition: background 0.3s linear;
+
+}
+#divimage.imaged{
+    background: url('./ghosts-animate.svg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.dark{
+    background: var(--dark-2);
+}
+input{
+    position: absolute;
+}
+label{
+    background: var(--light-2);
+    border-radius: 30px;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    width: 100px;
+}
+#toggle-button:checked + label{
+    background: var(--dark-0);
+}
+label .sun-moon{
+    background: var(--light-0);
+    border-radius: 50%;
+    height: 25px;
+    margin: 7px;
+    transition: transform 0.4s ease;
+    width: 25px;
+}
+#toggle-button:checked + label .sun-moon{
+    background: var(--dark-1);
+    transform: translatex(62px);
+}
+
+a{
+    font-family: monospace;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #455a64;
+    transition: color 0.3s ease-in;
+    text-decoration: none;
+}
+a.dark{
+    color: #e0e0e0;
+    
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width:1300px) {
+    div.image{
+        max-width: 470px;
+    }
+}
